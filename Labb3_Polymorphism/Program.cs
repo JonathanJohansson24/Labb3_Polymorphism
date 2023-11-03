@@ -7,11 +7,15 @@
             Geometry circle = new Circle();
             Geometry rectangle = new Rectangle();
             Geometry square = new Square();
+            List<Geometry> geometries = new List<Geometry> { circle, rectangle, square };
 
 
-            Console.WriteLine($"Arean av cirkel = {circle.Area()}");
-            Console.WriteLine($"Arean av fyrkant = {square.Area()}");
-            Console.WriteLine($"Arean av rektangel = {rectangle.Area()}");
+            foreach (Geometry geom in geometries)
+            {
+                Console.WriteLine($"Area of {geom.GetType().Name} = {geom.Area():0.00}");
+            }
+
+           
 
             Console.ReadKey();
 
